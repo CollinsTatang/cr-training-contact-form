@@ -326,72 +326,231 @@ li {
   list-style: inside url("../media/svg/circle.svg");
 }
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 4px 24px;
+#contact {
+  padding: 10%;
 }
 
-.form-container h1 {
-  width: 327px;
-  height: 363px;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+#contact h2 {
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 32px;
+  line-height: 44px;
   text-align: center;
   color: #172b4d;
-  margin: 24px auto;
 }
 
-.form-group {
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0;
-  margin: 38px auto;
 }
 
-.form-control input {
-  width: 327px;
-  padding: 15px;
-  background: #fff;
-  border: 1px solid #d0d9d4;
-  box-sizing: border-box;
-  border-radius: 4px;
-  margin: 12px auto;
+input {
+  border: none;
+  outline: none;
+  border-bottom: solid 2px #dbd8d7;
 }
 
-.form-control textarea {
-  width: 327px;
-  height: 114px;
-  background: #fff;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 12px;
-  margin: 12px auto;
-  font-family: Inter, Arial, Helvetica, sans-serif;
+textarea {
+  color: #3c3a39;
+  border: none;
+  outline: none;
+}
+
+input,
+textarea {
+  font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
-  color: #091e42;
-  resize: none;
+  margin: 5px;
+  padding: 5px;
+  min-width: 50vw;
 }
 
-.form-button {
-  border: none;
-  color: #fff;
-  background-color: #ff6b00;
-  padding: 15px;
-  width: 128px;
-  height: 48px;
+.name-form {
+  display: none;
 }
 
-.form-button:hover {
-  border: #ff6b00;
-  color: #ff6b00;
-  background: #fff5e1;
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5vh;
+  filter:
+    invert(67%) sepia(46%) saturate(986%) hue-rotate(179deg)
+    brightness(92%) contrast(82%);
+}
+
+.toggled {
+  background-color: #1c1a19;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 130%;
+  position: absolute;
+  z-index: 5;
+}
+
+.untoggled {
+  display: none;
+}
+
+.close-popup {
+  border-width: 0;
+  background-color: #1c1a19;
+  fill: #d2d5db;
+  width: min-content;
+  align-self: flex-end;
+  margin: 10px;
+}
+
+.bigger {
+  font-size: 50px;
+  margin: 50px;
+  height: 100px;
+  color: #d2d5db;
+}
+
+.bigger:hover,
+.bigger:visited {
+  color: #d2d5db;
+}
+
+@media all and (min-width: 720px) {
+  .top-social {
+    flex-direction: column;
+    position: absolute;
+    left: 5px;
+    bottom: 35%;
+  }
+
+  .mobile-icon {
+    display: none;
+  }
+
+  .desktop-icon {
+    display: block;
+    height: 50%;
+  }
+
+  #intro {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-bars {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: block;
+  }
+
+  #desktop-nav ul {
+    display: flex;
+    margin-right: 10vw;
+  }
+
+  .nav-link {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid transparent;
+    transition: 350ms;
+  }
+
+  .nav-link:hover {
+    border: 1px solid #d2d5db;
+  }
+
+  #logo {
+    font-size: 24px;
+  }
+
+  .first-card {
+    display: flex;
+  }
+
+  .first-card-img {
+    width: 40vw;
+  }
+
+  .cards-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    width: auto;
+    height: 40vh;
+    padding: 2%;
+    cursor: pointer;
+  }
+
+  .card,
+  .card * {
+    transition: all 350ms;
+  }
+
+  .card-link,
+  .card:hover .background-div,
+  .card:hover .card-description {
+    opacity: 0;
+  }
+
+  .card:hover .card-link {
+    opacity: 1;
+  }
+
+  .stacks {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .about-me-section {
+    align-items: flex-start;
+  }
+
+  .about-me-section > * {
+    max-width: 50vw;
+    margin: 15px 0;
+  }
+
+  #contact {
+    display: flex;
+    padding: 10% 5%;
+  }
+
+  #contact h2 {
+    width: 30vw;
+  }
+
+  #fullname {
+    display: none;
+  }
+
+  #email,
+  textarea {
+    min-width: 50vw;
+  }
+
+  .name-form {
+    display: flex;
+    min-width: 100%;
+  }
+
+  #name,
+  #surname {
+    min-width: 49%;
+  }
 }
