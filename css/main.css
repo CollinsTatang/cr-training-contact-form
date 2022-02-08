@@ -553,4 +553,11 @@ textarea {
   #surname {
     min-width: 49%;
   }
+
+  .centered-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
 }
